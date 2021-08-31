@@ -36,7 +36,7 @@ function render(variables = {}) {
           <h1>${variables.name != null ? variables.name : ""} ${
     variables.lastname != null ? variables.lastname : ""
   }</h1>
-          <h2>${variables.role != null ? variables.lastname : ""}</h2>
+          <h2>${variables.role != null ? variables.role : ""}</h2>
           <h3>${variables.city != null ? variables.city : ""}, ${
     variables.country != null ? variables.country : ""
   }</h3>
@@ -88,7 +88,7 @@ window.onload = function() {
   };
   render(window.variables); //render the card for the first time
 
-  document.querySelectorAll(".picker").forEach(function(elm) {
+  document.querySelectorAll(".picker").forEach(elm => {
     elm.addEventListener("change", function(e) {
       // <- add a listener to every input
       const attribute = e.target.getAttribute("for"); // when any input changes, collect the value
